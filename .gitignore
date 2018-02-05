@@ -11,7 +11,7 @@ node_modules/**
 build/**
 coverage/**
 
-dev/builder/release/**
+dev/builder/release/*.*
 dev/builder/ckbuilder/**
 dev/langtool/po/**
 dev/langtool/cklangtool/**
