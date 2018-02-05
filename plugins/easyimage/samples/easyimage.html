@@ -13,6 +13,12 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 </head>
 <body id="main">
 
+<style>
+	.adjoined-bottom:before {
+		height: 270px;
+	}
+</style>
+
 <nav class="navigation-a">
 	<div class="grid-container">
 		<ul class="navigation-a-left grid-width-70">
@@ -39,7 +45,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 		<div class="grid-container">
 			<div class="content grid-width-100">
 				<h1>Easy Image Demo</h1>
-				<p>It shows our progress of work on Easy Image plugin.</p>
+				<p>It shows our progress of work on Easy Image. Drop an image file in the editor to see how easily images can be handled.</p>
 			</div>
 		</div>
 	</div>
@@ -111,7 +117,7 @@ function getToken( callback ) {
 
 getToken( function( token ) {
 	CKEDITOR.replace( 'editor', {
-		plugins: 'sourcearea,toolbar,undo,wysiwygarea,list,liststyle,format,link,basicstyles',
+		plugins: 'easyimage,autogrow,sourcearea,toolbar,undo,wysiwygarea,list,liststyle,format,link,basicstyles,pastefromword',
 		toolbar: [
 			{ name: 'document', items: [ 'Source', 'Undo', 'Redo' ] },
 			{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike', '-', 'RemoveFormat' ] },
@@ -119,7 +125,6 @@ getToken( function( token ) {
 			{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
 			{ name: 'styles', items: [ 'Format' ] }
 		],
-		extraPlugins: 'easyimage',
 		cloudServices_url: 'https://files.cke-cs.com/upload/',
 		cloudServices_token: token,
 		height: 500
