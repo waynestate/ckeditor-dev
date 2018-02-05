@@ -38,6 +38,7 @@ var CKBUILDER_CONFIG = {
 		basicstyles: 1,
 		bidi: 1,
 		blockquote: 1,
+		buttonwayne: 1,
 		clipboard: 1,
 		colorbutton: 1,
 		colordialog: 1,
@@ -93,6 +94,8 @@ var CKBUILDER_CONFIG = {
 		toolbar: 1,
 		undo: 1,
 		uploadimage: 1,
-		wysiwygarea: 1
+		wysiwygarea: 1,
+		youtube: 1,
+		youtubethumb: 1
 	}
 };
