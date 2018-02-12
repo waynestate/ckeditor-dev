@@ -7,6 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
+
 	// %REMOVE_START%
 	config.plugins =
 		'about,' +
@@ -14,6 +15,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'basicstyles,' +
 		'bidi,' +
 		'blockquote,' +
+		'buttonwayne,' +
 		'clipboard,' +
 		'colorbutton,' +
 		'colordialog,' +
@@ -68,6 +70,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'toolbar,' +
 		'undo,' +
 		'uploadimage,' +
+		'youtubethumb,' +
 		'wysiwygarea';
 	// %REMOVE_END%
 };
