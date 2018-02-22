@@ -2,7 +2,7 @@
     icons: 'youtubethumb',
     init: function( editor ) {
         editor.addCommand( 'youtubethumbdialog', new CKEDITOR.dialogCommand( 'youtubethumbdialog' ) );
-        editor.ui.addButton( 'youtubethumb', {
+        editor.ui.addButton( 'YoutubeThumb', {
             label: 'Insert YouTube Thumbnail',
             command: 'youtubethumbdialog',
             toolbar: 'links,100'
