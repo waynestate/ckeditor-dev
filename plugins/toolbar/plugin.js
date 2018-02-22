@@ -643,8 +643,7 @@
 			{ name: 'colors' },
 			{ name: 'tools' },
 			{ name: 'others' },
-			{ name: 'about' },
-			{ name: 'wsu', groups: ['buttonwayne','youtubethumb']}
+			{ name: 'about' }
 		] );
 	}
 } )();
