@@ -30,7 +30,7 @@ CKEDITOR.editorConfig = function( config ) {
 		['Bold','Italic','Strike','-','Subscript','Superscript'],
 		['NumberedList','BulletedList','-'],
 		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
-		['Link','Unlink','Anchor','ButtonWayne','youtubethumb'],
+		['Link','Unlink','Anchor','ButtonWayne','YoutubeThumb'],
 		'/',
 		['Format','FontSize'],
 		['Maximize', 'ShowBlocks','-','About']
