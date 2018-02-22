@@ -5,7 +5,7 @@
         editor.ui.addButton( 'Buttonwayne', {
             label: 'Insert Button',
             command: 'buttondialog',
-            toolbar: 'buttonwayne'
+            toolbar: 'links,90'
         });
 
         CKEDITOR.dialog.add( 'buttondialog', this.path + 'dialogs/button.js' );

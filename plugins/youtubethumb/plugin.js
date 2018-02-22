@@ -5,7 +5,7 @@
         editor.ui.addButton( 'youtubethumb', {
             label: 'Insert YouTube Thumbnail',
             command: 'youtubethumbdialog',
-            toolbar: 'youtubethumb'
+            toolbar: 'links,100'
         });
 
         CKEDITOR.dialog.add( 'youtubethumbdialog', this.path + 'dialogs/button.js' );
