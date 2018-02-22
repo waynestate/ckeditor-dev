@@ -7,6 +7,34 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
+	config.skin = 'moono';
+	config.image2_altRequired = true;
+	config.toolbar_page = [
+		['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+		['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+		['Image','Table','HorizontalRule','SpecialChar','PageBreak'],
+		'/',
+		['Bold','Italic','Strike','-','Subscript','Superscript'],
+		['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
+		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+		['Link','Unlink','Anchor','Youtube'],
+		'/',
+		['Format','FontSize'],
+		['Maximize', 'ShowBlocks','-','About']
+	];
+	config.toolbar_email = [
+		['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+		['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+		['Image','Table','HorizontalRule','SpecialChar','PageBreak'],
+		'/',
+		['Bold','Italic','Strike','-','Subscript','Superscript'],
+		['NumberedList','BulletedList','-'],
+		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+		['Link','Unlink','Anchor','ButtonWayne','youtubethumb'],
+		'/',
+		['Format','FontSize'],
+		['Maximize', 'ShowBlocks','-','About']
+	];
 
 	// %REMOVE_START%
 	config.plugins =
