@@ -37,7 +37,7 @@
 
             if(center == false){
                 html = '<table cellpadding="0" cellspacing="0"><tbody><tr>' +
-                    '<td align="center" bgcolor="#ffda8a" height="40" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border:1px solid #ffdf98; background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fde1a3), color-stop(1, #f5c650)); background:-moz-linear-gradient(top, #fde1a3 5%, #f5c650 100%); background:-webkit-linear-gradient(top, #fde1a3 5%, #f5c650 100%); background:-o-linear-gradient(top, #fde1a3 5%, #f5c650 100%); background:-ms-linear-gradient(top, #fde1a3 5%, #f5c650 100%); background:linear-gradient(to bottom, #fde1a3 5%, #f5c650 100%); color: #2b5a48; display: block;" width="200">' +
+                    '<td align="center" bgcolor="#ffda8a" height="40" style="border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border: 1px solid rgb(255, 223, 152); background-image: linear-gradient(rgb(253, 225, 163) 5%, rgb(245, 198, 80) 100%); text-align: center; background-position: initial initial; background-repeat: initial initial;padding: 0px 15px;" width="200">' +
                     '<a class="buttonwayne" href="' + url + '" style="color: #0a4b41; font-size: 16px; text-shadow:0px 1px 0px #ffee66; font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-decoration: none; line-height: 40px; width: 100%; display: inline-block;">' +
                     label +
                     '</a></td></tr></tbody></table>';

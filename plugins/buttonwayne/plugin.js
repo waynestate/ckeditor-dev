@@ -1,7 +1,12 @@
 ﻿CKEDITOR.plugins.add( 'buttonwayne', {
     icons: 'buttonwayne',
     init: function( editor ) {
-        editor.addCommand( 'buttondialog', new CKEDITOR.dialogCommand( 'buttondialog' ) );
+        editor.addCommand( 'buttondialog', new CKEDITOR.dialogCommand( 'buttondialog',{
+        	allowedContent: 'div{text-align};' +
+				'table[cellpadding,cellspacing];'+
+				'tbody tr td[align,bgcolor,height,width]{border-*-radius,background-*,padding,text-align,display};' +
+				'a[class="buttonwayne",href]{color,display,font-size,font-weight,font-family,line-height,text-decoration,text-shadow}'
+		}));
         editor.ui.addButton( 'ButtonWayne', {
             label: 'Insert Button',
             command: 'buttondialog',
