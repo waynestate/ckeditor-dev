@@ -9,6 +9,23 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#AADC6E';
 	config.skin = 'moono';
 	config.image2_altRequired = true;
+	config.pasteFromWordRemoveFontStyles = true;
+
+	// Remove allowed margins when pasting from Word
+	this.on('afterPasteFromWord', function(evt){
+		var filter = evt.editor.filter.clone(),
+			fragment = CKEDITOR.htmlParser.fragment.fromHtml( evt.data.dataValue ),
+			writer = new CKEDITOR.htmlParser.basicWriter();
+
+		// Disallow certain styles.
+		filter.disallow( 'p{margin-*}' );
+
+		// Process, and overwrite evt.data.dataValue.
+		filter.applyTo( fragment );
+		fragment.writeHtml( writer );
+		evt.data.dataValue = writer.getHtml();
+	});
+
 	config.toolbar_page = [
 		['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
 		['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
