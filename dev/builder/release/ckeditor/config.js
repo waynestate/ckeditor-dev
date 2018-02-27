@@ -26,6 +26,24 @@ CKEDITOR.editorConfig = function( config ) {
 		evt.data.dataValue = writer.getHtml();
 	});
 
+	this.on('instanceReady', function (evt){
+		evt.editor.filter.addTransformations([
+			[
+				{
+					element: 'a',
+					left: function(el) {
+						var is_external = (el.attributes.hasOwnProperty('href') && el.attributes.href.substr(0, 4) === 'http' && el.attributes.target === '_blank');
+
+						return is_external && !el.attributes.rel;
+					},
+					right: function(el){
+						el.attributes.rel = 'noopener';
+					}
+				}
+			]
+		]);
+	});
+
 	config.toolbar_page = [
 		['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
 		['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
