@@ -76,64 +76,54 @@ CKEDITOR.editorConfig = function( config ) {
 		'about,' +
 		'a11yhelp,' +
 		'basicstyles,' +
-		'bidi,' +
 		'blockquote,' +
 		'buttonwayne,' +
 		'clipboard,' +
-		'colorbutton,' +
 		'colordialog,' +
-		'copyformatting,' +
 		'contextmenu,' +
 		'dialogadvtab,' +
 		'div,' +
 		'elementspath,' +
 		'enterkey,' +
 		'entities,' +
-		'filebrowser,' +
 		'find,' +
 		'flash,' +
-		'floatingspace,' +
 		'font,' +
 		'format,' +
-		'forms,' +
 		'horizontalrule,' +
 		'htmlwriter,' +
 		'image,' +
+		'image2,' +
 		'iframe,' +
 		'indentlist,' +
 		'indentblock,' +
 		'justify,' +
-		'language,' +
 		'link,' +
 		'list,' +
 		'liststyle,' +
 		'magicline,' +
 		'maximize,' +
-		'newpage,' +
 		'pagebreak,' +
 		'pastefromword,' +
 		'pastetext,' +
-		'preview,' +
 		'print,' +
 		'removeformat,' +
 		'resize,' +
-		'save,' +
+		'scayt,' +
 		'selectall,' +
 		'showblocks,' +
 		'showborders,' +
-		'smiley,' +
 		'sourcearea,' +
 		'specialchar,' +
-		'stylescombo,' +
 		'tab,' +
 		'table,' +
 		'tableselection,' +
 		'tabletools,' +
-		'templates,' +
 		'toolbar,' +
 		'undo,' +
-		'uploadimage,' +
+		'youtube,' +
 		'youtubethumb,' +
+		'wsc,' +
 		'wysiwygarea';
 	// %REMOVE_END%
 };
