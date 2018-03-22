@@ -21,7 +21,7 @@ CKEDITOR.editorConfig = function( config ) {
 			writer = new CKEDITOR.htmlParser.basicWriter();
 
 		// Disallow certain styles.
-		filter.disallow( 'p{margin-*}' );
+		filter.disallow( 'p{margin-*};*(Mso*)' );
 
 		// Process, and overwrite evt.data.dataValue.
 		filter.applyTo( fragment );
