@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.html or http://ckeditor.com/license
  */
@@ -1408,7 +1408,8 @@ CKEDITOR.dialog.add('checkspell', function(editor) {
 		constraints = {
 			minWidth: 560,
 			minHeight: 444
-		};
+		},
+		loadScriptWasFailed = false;
 
 	function initView(dialog) {
 		var newViewSettings = {
@@ -1807,7 +1808,7 @@ CKEDITOR.dialog.add('checkspell', function(editor) {
 				NS.userDictionaryName = editor.config.wsc_userDictionaryName;
 				NS.defaultLanguage = CKEDITOR.config.defaultLanguage;
 				var	protocol = document.location.protocol == "file:" ? "http:" : document.location.protocol;
-				var wscCoreUrl = editor.config.wsc_customLoaderScript  || ( protocol + '//www.webspellchecker.net/spellcheck3/script/ssrv.cgi?plugin=fck2&customerid=' + NS.wsc_customerId + '&cmd=script&doc=wsc&schema=22');
+				var wscCoreUrl = editor.config.wsc_customLoaderScript  || ( protocol + '//www.webspellchecker.net/spellcheck31/lf/22/js/wsc_fck2plugin.js');
 			} else {
 				NS.dialog.hide();
 				return;
@@ -1815,6 +1816,22 @@ CKEDITOR.dialog.add('checkspell', function(editor) {
 
 			initView(this);
 			CKEDITOR.scriptLoader.load(wscCoreUrl, function(success) {
+				// We do not need do work if script download was failed
+				if (!success) {
+					loadScriptWasFailed = true;
+
+					return;
+				}
+
+				// For second or more times 'CKEDITOR.scriptLoader.load' function always
+				// returns 'true' for 'success' argument even if download was failed in first time.
+				// So we need to check failed download manually.
+				if (loadScriptWasFailed) {
+					NS.onLoadOverlay.setEnable();
+
+					return;
+				}
+
 				if(CKEDITOR.config && CKEDITOR.config.wsc && CKEDITOR.config.wsc.DefaultParams){
 					NS.serverLocationHash = CKEDITOR.config.wsc.DefaultParams.serviceHost;
 					NS.logotype = CKEDITOR.config.wsc.DefaultParams.logoPath;
@@ -3159,7 +3176,7 @@ CKEDITOR.on('dialogDefinition', function(dialogDefinitionEvent) {
 
 		dialogDefinition.dialog.on('cancel', function(cancelEvent) {
 			dialogDefinition.dialog.getParentEditor().config.wsc_onClose.call(this.document.getWindow().getFrame());
-    		NS.div_overlay.setDisable();
+			NS.div_overlay && NS.div_overlay.setDisable();
     		NS.onLoadOverlay.setDisable();
 			return false;
 		}, this, null, -1);
