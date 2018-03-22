@@ -1,6 +1,6 @@
 ﻿/**
- * Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/legal/terms-of-use/#open-source-licences
+ * Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
 CKEDITOR.editorConfig = function( config ) {
@@ -10,6 +10,9 @@ CKEDITOR.editorConfig = function( config ) {
 	config.skin = 'moono';
 	config.image2_altRequired = true;
 	config.pasteFromWordRemoveFontStyles = true;
+
+	// ACF rules not allowed by any plugins
+	config.extraAllowedContent = '*(*)[data-*];'; // allow all classes and any data attribute on all elements
 
 	// Remove allowed margins when pasting from Word
 	this.on('afterPasteFromWord', function(evt){
