@@ -11,6 +11,9 @@ CKEDITOR.editorConfig = function( config ) {
 	config.image2_altRequired = true;
 	config.pasteFromWordRemoveFontStyles = true;
 
+	// ACF rules not allowed by any plugins
+	config.extraAllowedContent = '*(*)[data-*];'; // allow all classes and any data attribute on all elements
+
 	// Remove allowed margins when pasting from Word
 	this.on('afterPasteFromWord', function(evt){
 		var filter = evt.editor.filter.clone(),
