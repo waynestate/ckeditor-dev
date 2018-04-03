@@ -12,7 +12,8 @@ CKEDITOR.editorConfig = function( config ) {
 	config.pasteFromWordRemoveFontStyles = true;
 
 	// ACF rules not allowed by any plugins
-	config.extraAllowedContent = '*(*)[data-*];'; // allow all classes and any data attribute on all elements
+	config.extraAllowedContent = '*(*)[data-*];' + // allow all classes and any data attribute on all elements
+	'iframe{*}[width,height,src,frameborder,allowfullscreen];'; // Don't require the attributes that the YouTube Plugin required
 
 	// Remove allowed margins when pasting from Word
 	this.on('afterPasteFromWord', function(evt){
