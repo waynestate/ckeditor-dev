@@ -51,7 +51,7 @@ CKEDITOR.editorConfig = function( config ) {
                 {
                     element: 'img',
 					left: function(el) {
-                    	return !el.styles;
+                    	return Object.keys(el.styles).length == 0;
 					},
                     right: function(el){
                         el.styles.margin = '10px';
