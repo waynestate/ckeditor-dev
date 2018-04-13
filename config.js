@@ -14,7 +14,8 @@ CKEDITOR.editorConfig = function( config ) {
 	// ACF rules not allowed by any plugins
 	config.extraAllowedContent = '*(*)[data-*];' + // allow all classes and any data attribute on all elements
 	'iframe{*}[width,height,src,frameborder,allowfullscreen];' + // Don't require the attributes that the YouTube Plugin required
-	'img{margin*,padding*};' // Allow margins and padding on <img> to be modifiable
+	'img{margin*,padding*};' + // Allow margins and padding on <img> to be modifiable
+	'blockquote cite;' // Allow <cite> to be within the <blockquote>
 	;
 
 	// Remove allowed margins when pasting from Word
