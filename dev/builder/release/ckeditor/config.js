@@ -55,10 +55,21 @@ CKEDITOR.editorConfig = function( config ) {
                     	return Object.keys(el.styles).length === 0;
 					},
                     right: function(el){
-                        el.styles.margin = '10px';
+                        el.styles['padding'] = '10px';
                     }
                 }
-            ]
+            ],
+			[
+                {
+                    element: 'figure',
+                    left: function(el) {
+                        return Object.keys(el.styles).length === 0;
+                    },
+                    right: function(el){
+                        el.styles['padding-bottom'] = '10px';
+                    }
+                }
+			]
 		]);
 	});
 
