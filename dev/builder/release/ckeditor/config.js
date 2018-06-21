@@ -15,7 +15,8 @@ CKEDITOR.editorConfig = function( config ) {
 	config.extraAllowedContent = '*(*)[data-*];' + // allow all classes and any data attribute on all elements
 	'iframe{*}[width,height,src,frameborder,allowfullscreen];' + // Don't require the attributes that the YouTube Plugin required
 	'img{margin*,padding*};' + // Allow margins and padding on <img> to be modifiable
-	'blockquote cite;' // Allow <cite> to be within the <blockquote>
+	'blockquote cite;' + // Allow <cite> to be within the <blockquote>
+	'dl dd dt;' // Allow <dl> <dd> and <dt> elements due to old Accordion code on older sites, can be removed in the future when not needed
 	;
 
 	// Remove allowed margins when pasting from Word
