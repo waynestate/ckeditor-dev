@@ -87,6 +87,19 @@ CKEDITOR.editorConfig = function( config ) {
 		['Format','FontSize'],
 		['Maximize', 'ShowBlocks','-','About']
 	];
+	config.toolbar_newsletter = [
+		['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+		['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+		['Image','Table','HorizontalRule','SpecialChar','PageBreak'],
+		'/',
+		['Bold','Italic','Strike','-','Subscript','Superscript'],
+		['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
+		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+		['Link','Unlink','Anchor','Youtube'],
+		'/',
+		['Format','FontSize','TextColor'],
+		['Maximize', 'ShowBlocks','-','About']
+	];
 	config.toolbar_email = [
 		['Source','-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
 		['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
@@ -97,7 +110,7 @@ CKEDITOR.editorConfig = function( config ) {
 		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
 		['Link','Unlink','Anchor','ButtonWayne','YoutubeThumb'],
 		'/',
-		['Format','FontSize'],
+		['Format','FontSize','TextColor'],
 		['Maximize', 'ShowBlocks','-','About']
 	];
     config.toolbar_newsroom = [
