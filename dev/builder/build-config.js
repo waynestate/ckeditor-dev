@@ -40,7 +40,7 @@ var CKBUILDER_CONFIG = {
 		blockquote: 1,
 		buttonwayne: 1,
 		clipboard: 1,
-		colorbutton: 0,
+		colorbutton: 1,
 		colordialog: 1,
 		copyformatting: 0,
 		contextmenu: 1,
