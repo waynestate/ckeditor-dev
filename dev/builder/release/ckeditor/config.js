@@ -13,7 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// ACF rules not allowed by any plugins
 	config.extraAllowedContent = '*(*)[data-*];' + // allow all classes and any data attribute on all elements
-	'iframe{*}[width,height,src,frameborder,allowfullscreen];' + // Don't require the attributes that the YouTube Plugin required
+	'iframe{*}[width,height,src,frameborder,allowfullscreen,title];' + // Don't require the attributes that the YouTube Plugin required
 	'img{margin*,padding*};' + // Allow margins and padding on <img> to be modifiable
 	'blockquote cite;' + // Allow <cite> to be within the <blockquote>
 	'dl dd dt;' // Allow <dl> <dd> and <dt> elements due to old Accordion code on older sites, can be removed in the future when not needed
@@ -81,7 +81,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'/',
 		['Bold','Italic','Strike','-','Subscript','Superscript'],
 		['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
-		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+		['JustifyLeft','JustifyCenter','JustifyRight'],
 		['Link','Unlink','Anchor','Youtube'],
 		'/',
 		['Format','FontSize'],
@@ -94,7 +94,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'/',
 		['Bold','Italic','Strike','-','Subscript','Superscript'],
 		['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
-		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+		['JustifyLeft','JustifyCenter','JustifyRight'],
 		['Link','Unlink','Anchor','Youtube'],
 		'/',
 		['Format','FontSize','TextColor'],
@@ -107,7 +107,7 @@ CKEDITOR.editorConfig = function( config ) {
 		'/',
 		['Bold','Italic','Strike','-','Subscript','Superscript'],
 		['NumberedList','BulletedList','-'],
-		['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+		['JustifyLeft','JustifyCenter','JustifyRight'],
 		['Link','Unlink','Anchor','ButtonWayne','YoutubeThumb'],
 		'/',
 		['Format','FontSize','TextColor'],
